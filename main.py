@@ -22,7 +22,7 @@ def viator():
 
     headers = {
         "Accept": "application/json",
-        "apiKey": VIATOR_API_KEY
+        "exp-api-key": VIATOR_API_KEY
     }
 
     params = {
