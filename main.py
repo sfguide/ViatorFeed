@@ -8,7 +8,7 @@ app = Flask(__name__)
 CORS(app)
 
 VIATOR_API_KEY = os.getenv("VIATOR_API_KEY")
-VIATOR_BASE_URL = "https://api.viator.com/partner/products/search"
+VIATOR_BASE_URL = "https://api.sandbox.viator.com/partner/products/search"
 
 @app.route("/")
 def home():
