@@ -17,7 +17,6 @@ def home():
 @app.route("/viator")
 def viator():
     location = request.args.get("location", "Florida")
-    topX = request.args.get("topX", "10") 
     categoryId = request.args.get("categoryId")
 
     headers = {
@@ -26,8 +25,7 @@ def viator():
     }
 
     params = {
-        "location": location,
-        "topX": topX
+        "location": location
     }
 
     if categoryId:
