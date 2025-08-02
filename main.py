@@ -8,7 +8,7 @@ app = Flask(__name__)
 CORS(app)
 
 VIATOR_API_KEY = os.getenv("VIATOR_API_KEY")
-VIATOR_BASE_URL = "https://api.viator.com/partner/products/search"
+VIATOR_BASE_URL = "https://api.sandbox.viator.com/partner/v2/products/search"
 
 @app.route("/")
 def home():
@@ -16,8 +16,8 @@ def home():
 
 @app.route("/viator")
 def viator():
-    location = request.args.get("location", "Sarasota")
-    topX = request.args.get("topX", "10")
+    location = request.args.get("location", "Florida")
+    topX = request.args.get("topX", "10") 
     categoryId = request.args.get("categoryId")
 
     headers = {
